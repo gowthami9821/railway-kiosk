@@ -76,6 +76,8 @@ html, body, #root {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  height: 100dvh; /* Adapts to mobile address bars */
+  width: 100%;
   max-width: 600px;
   margin: 0 auto;
   background: var(--surface);
@@ -264,10 +266,10 @@ html, body, #root {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   position: relative;
   z-index: 1;
-  overflow: hidden;
+  overflow-y: auto; /* Allows scrolling on small screens */
+  overflow-x: hidden;
   background: var(--orb-bg);
   padding: 20px 24px;
 }
@@ -279,6 +281,7 @@ html, body, #root {
   gap: 20px;
   width: 100%;
   max-width: 360px;
+  margin: auto 0; /* Auto margin centers it perfectly while allowing scroll */
 }
 
 /* Transcript bubble (user query shown above orb) */
