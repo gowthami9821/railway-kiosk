@@ -19,6 +19,8 @@ app.use(cors({
   origin: "*"
 }));
 
+app.use(express.json());
+
 const uploadsDir = path.join(__dirname, "uploads");
 if (!fs.existsSync(uploadsDir)) {
   fs.mkdirSync(uploadsDir, { recursive: true });
