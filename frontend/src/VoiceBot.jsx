@@ -224,20 +224,7 @@ export default function VoiceBot() {
         </div>
         <div className="vb-header-right">
           <div className="vb-header-controls">
-            {/* Language switcher */}
-            <div className="vb-lang-switcher">
-              {LANGUAGES.map((lang) => (
-                <button
-                  key={lang.code}
-                  className={`vb-lang-btn ${language.code === lang.code ? "active" : ""}`}
-                  onClick={() => handleLanguageSwitch(lang)}
-                  title={lang.name}
-                  disabled={isDisabled}
-                >
-                  {lang.label}
-                </button>
-              ))}
-            </div>
+
             {/* Dark/Light toggle */}
             <button
               className="vb-theme-btn"
@@ -308,6 +295,23 @@ export default function VoiceBot() {
               <p className="vb-empty-hint">{language.emptyHint}</p>
             </div>
           )}
+        </div>
+
+        {/* ── Language Switcher Buttons ── */}
+        <div className="vb-lang-switcher-area">
+          <div className="vb-lang-switcher">
+            {LANGUAGES.map((lang) => (
+              <button
+                key={lang.code}
+                className={`vb-lang-btn ${language.code === lang.code ? "active" : ""}`}
+                onClick={() => handleLanguageSwitch(lang)}
+                title={lang.name}
+                disabled={isDisabled}
+              >
+                {lang.label}
+              </button>
+            ))}
+          </div>
         </div>
       </main>
 
