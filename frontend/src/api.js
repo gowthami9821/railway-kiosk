@@ -72,7 +72,7 @@
 // api.js - API calls to the Railway Voice Bot Backend
 import axios from "axios";
 
-const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const API_BASE ="https://railway-kiosk-now.onrender.com";
 
 /**
  * Send recorded audio blob to backend and receive audio response
