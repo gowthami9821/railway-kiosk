@@ -72,7 +72,7 @@
 // api.js - API calls to the Railway Voice Bot Backend
 import axios from "axios";
 
-const API_BASE ="https://railway-kiosk-now.onrender.com";
+const API_BASE ="https://rkp-ren.onrender.com";
 
 /**
  * Send recorded audio blob to backend and receive audio response
