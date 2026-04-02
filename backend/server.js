@@ -16,9 +16,7 @@ const PORT = process.env.PORT || 5000;
 // MIDDLEWARE
 // =============================================
 app.use(cors({
-  origin: "https://rkp-net.netlify.app", // your frontend URL
-  methods: ["GET", "POST"],
-  allowedHeaders: ["Content-Type"]
+  origin: "*"
 }));
 
 const uploadsDir = path.join(__dirname, "uploads");
